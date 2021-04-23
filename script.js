@@ -1,20 +1,21 @@
 'use strict'
 
-function selectionPlayer{
-const selection = prompt('Choose: 1-Rock, 2-Paper, 3-Scissors')
-switch (selection){
-    case 1:
-        return 'rock'
-        break
-    case 2:
-        return 'paper'
-        break
-    case 3:
-        return 'scissors'
-        break
-}
+function playerSelection(){
+const selection = console.log('Choose: Rock, Paper, Scissors')
+    if(String(selection.toLowerCase()) === String('Rock'.toLowerCase())){
+        console.log('Rock')
+        selection = 1
+    } else if(String(selection.toLowerCase()) === String('Paper'.toLowerCase())){
+        console.log('Paper')
+        selection = 2
+    } else if(String(selection.toLowerCase()) === String('Scissors'.toLowerCase())){
+        console.log('Scissors')
+        selection = 3
+    }
+return selection
 }
 
+const selection = playerSelection()
 
 function computerPlay(){
 const randomNumber = Math.floor((Math.random()*3)+0)
