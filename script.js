@@ -1,5 +1,8 @@
 'use strict'
 
+const playerSelection = "rock"
+const computerSelection = computerPlay()
+
 function computerPlay(){
 const randomNumber = Math.floor((Math.random()*3)+0)
     if(randomNumber === 0){
@@ -13,28 +16,30 @@ const randomNumber = Math.floor((Math.random()*3)+0)
 
 function playRound(playerSelection, computerPlay){
     if(playerSelection === computerPlay){
-        return console.log(`It's a draw`)
+        return "draw"
 
     } else if(playerSelection === "rock"){
         if(computerPlay === "paper") 
-        return console.log('You lost')
+        return "lost"
         if(computerPlay === "scissors") 
-        return console.log('You won')
+        return "won"
 
     } else if(playerSelection === "paper"){
         if(computerPlay === "scissors") 
-        return console.log('You lost')
+        return "lost"
         if(computerPlay === "rock") 
-        return console.log("You won")
+        return "won"
 
     } else if(playerSelection === "scissors"){
         if(computerPlay === "rock") 
-        return console.log('You lost')
+        return "lost"
         if(computerPlay === "paper") 
-        return console.log("You won")
+        return "won"
     }
 }
 
-const playerSelection = "rock"
-const computerSelection = computerPlay()
-console.log(playRound(playerSelection, computerSelection))
+function game(){
+    for(let i=0;i<5;i++){
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
