@@ -16,7 +16,7 @@ const randomNumber = Math.floor((Math.random()*3)+0)
 
 function playRound(playerSelection, computerPlay){
     if(playerSelection === computerPlay){
-        return "draw"
+        return "tie"
 
     } else if(playerSelection === "rock"){
         if(computerPlay === "paper") 
@@ -39,7 +39,8 @@ function playRound(playerSelection, computerPlay){
 }
 
 function game(){
-    for(let i=0;i<5;i++){
-        console.log(playRound(playerSelection, computerSelection))
+let i = 0;
+    for(i;i<5;i++){
+        console.log(playRound(playerSelection, computerPlay))
     }
 }
