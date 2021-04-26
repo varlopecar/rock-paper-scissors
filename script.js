@@ -1,7 +1,11 @@
 'use strict'
 
-const playerSelection = "rock"
 const computerSelection = computerPlay()
+
+function playerSelection(){
+    const selection = prompt('Choose rock, paper or scissors')
+    return selection
+}
 
 function computerPlay(){
 const randomNumber = Math.floor((Math.random()*3)+0)
@@ -39,8 +43,6 @@ function playRound(playerSelection, computerPlay){
 }
 
 function game(){
-let i = 0;
-    for(i;i<5;i++){
-        console.log(playRound(playerSelection, computerPlay))
-    }
+    for(let i=0;i<5;i++)
+    console.log(playRound(playerSelection(), computerPlay()))
 }
