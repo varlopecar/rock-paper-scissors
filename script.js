@@ -42,7 +42,8 @@ function playRound(playerSelection, computerPlay){
     }
 }
 
-function game(){
-    for(let i=0;i<5;i++)
-    console.log(playRound(playerSelection(), computerPlay()))
-}
+// function game(){
+//     for(let i=0; i<5; i++)
+//     console.log(playRound(playerSelection(), computerPlay()))
+// }
+
