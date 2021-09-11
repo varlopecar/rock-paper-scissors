@@ -7,14 +7,13 @@ body{
 
 .container{
     height: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .title{
-    grid-column: 1/8;
-    grid-row: 1;
     margin: 4rem 3rem;
 }
 
@@ -32,16 +31,6 @@ body{
     justify-content: center;
 }
 
-#player{
-    grid-column: 1/2;
-    margin-right: 2rem;
-}
-
-#computer{
-    grid-column: 3/4;
-    margin-left: 2rem;
-}
-
 .buttons{
     display: flex;
     justify-content: center;
@@ -57,16 +46,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-.computerBtn{
-    margin: 0 1rem;
-    border: 5px solid black;
-    height: 5rem;
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
 
 .btn:hover{
     transform: scale(1.2);
